@@ -68,6 +68,23 @@ msg = MIMEText('<html><body><h1>Hello</h1>' +'<p>send by <a href="http://www.pyt
 # 如果Email中要加上附件怎么办？带附件的邮件可以看做包含若干部分的邮件：文本和各个附件本身，所以，可以构造一个MIMEMultipart对象
 # 代表邮件本身，然后往里面加上一个MIMEText作为邮件正文，再继续往里面加上表示附件的MIMEBase对象即可
 
+from email import encoders
+from email.header import  Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email.utils import parseaddr,formataddr
+
+import smtplib
+
+def _format_addr(s):
+    name,addr=parseaddr(s)
+    return formataddr((Header(name,'utf-8').encode(),addr))
+
+from_addr=''
+password=''
+to_addr=''
+smtp_sever=''
 # 邮件对象
 msg=MIMEMultipart()
 msg['from']=_format_addr('Python爱好者<%s>',%from_addr)
@@ -91,6 +108,18 @@ with open('/Users/michael/Downloads/test.png', 'rb) as f:
 	encoders.encode_base64(mime)
 	# 添加到MIMEMultipart:
 	msg.attach(mime)
+
+# 另外构造附件的方法
+att2=MIMEText(open('123.txt','rb').read(),'base64','utf-8')
+att2['Content-Type']='application/octet-stream'
+att2["Content-Disposition"] = 'attachment; filename="123.txt"'
+msg.attach(att2)
+
+
+sever_semp=smtplib.SMTP(smtp_sever,25)
+sever_semp.login(from_addr,password)
+sever_semp.sendmail(from_addr,[to_addr],msg.as_string())
+sever_semp.quit()
 
 # 发送图片
 
