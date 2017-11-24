@@ -79,4 +79,18 @@ print(' '.join(arg))
 #filename          返回当前文件的名称
 #lineno            返回当前（累计）的行数
 #isfristline       查询当前行是否是文件的第一行
-#isstdin           检测最后一行是否来自s'y'ssys
+#isstdin           检测最后一行是否来自sys.stdin
+#nextfile          关闭当前文件，移动到下一个文件
+#close             关闭序列
+
+#3.4集合，堆和双端序列
+#1.集合(set)
+print(set(range(10)))
+#检查成员资格，因此忽略重复值
+print(set([1,2,3,4,5,1,2,3,4,5]))
+#和字典一样，顺序随意
+print(set(['foo','nad','dde']))
+a=set([1,2,3])
+b=set([2,3,4])
+print(a.union(b))
+print(a | b)
