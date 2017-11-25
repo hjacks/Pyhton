@@ -65,4 +65,66 @@ print( y is x)
 name=['Mr.Li','Mr.Xiao']
 change(name[:])
 print(name)
+#2.2.1为什么修改参数
+def init(data):
+    data['first']={}
+    data['middle']={}
+    data['last']={}
+storage={}
+init(storage)
+print(storage)
+
+def lookup(data,label,name):
+    return data[label].get(name)
+me='Magnus Lie Hetland'
+storage['first']['Maguns']=[me]
+storage['middle']['Lie']=[me]
+storage['last']['Hetland']=[me]
+print(lookup(storage,'middle','Lie'))
+def store(data,full_name):
+    names=full_name.split()
+    if len(names)==2:
+        names.insert(1,' ')
+    labels=['first','middle','last']
+    for label,name in zip(labels,names):
+        people=lookup(data,label,name)
+        if people:
+            people.append(full_name)
+        else:
+            data[label][name]=full_name
+
+MyNames={}
+init(MyNames)
+store(MyNames,'xu xian tt')
+print(lookup(MyNames,'middle','xian'))
+#2.2.2若我的参数不可变了
+#若真想改变参数，可以将值放在列表中
+def inc(x):
+    x[0]=x[0]+1
+
+foo=[10]
+inc(foo)
+print(foo)
+
+#2.3关键字参数和默认值
+def hello(greeting,name):
+    print('%s,%s!'%(greeting,name))
+hello(greeting='hello',name='world')
+def hello_2(greeting='hello',name='world'):
+    print('%s,%s!' % (greeting, name))
+hello_2()
+hello_2('greeting')
+hello_2('greeting','universe')
+hello_2(name='tom')
+#4.3可变参数
+def print_parm(*par):
+    print(par)
+print_parm('xu')
+print_parm('xu','wang','li')
+
+
+
+
+
+
 
