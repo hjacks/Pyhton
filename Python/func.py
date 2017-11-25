@@ -121,6 +121,85 @@ def print_parm(*par):
     print(par)
 print_parm('xu')
 print_parm('xu','wang','li')
+def print_parm1(**par):
+    print(par)
+print_parm1(x=1,y=2,z=3)
+def f1(a, b, c=0, *args, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+
+f1(1,2,3)
+f1(1,2,3,4,5,6)
+f1(1,2,3,4,5,6,x=1,y=2)
+
+#4.5反转过程
+def add(x,y):
+    print(x+y)
+arg=(1,2)
+add(*arg)
+
+def with_star(**kw):
+    print(kw['name'],'is',kw['age'],'years old')
+def without_star(kw):
+    print(kw['name'], 'is', kw['age'], 'years old')
+args={'name':'dongxin','age':23}
+with_star(**args)
+without_star(args)
+#4.6练习使用参数
+def story(**kw):
+    return 'Once upon a time,there was a %(job)s called %(name)s.'%kw
+def power(x,y,*args):
+    if args:
+        print( 'Recieve redundant parameters:',args)
+    return pow(x,y)
+def interval(start,stop=None,step=1):
+    'Imitates range() for step > 0'
+    if stop is None:
+        start,stop=0,start
+    result=[]
+    i=start
+    while i<stop:
+        result.append(i)
+        i+=step
+    return result
+print(story(job='king',name='Mr.Grubm'))
+params={'job':'Language','name':'python'}
+print(story(**params))
+print(pow(2,3))
+print(pow(4,5))
+par=(5,)*2
+print(pow(*par))
+print(interval(10))
+print(interval(1,5))
+print(interval(3,18,4))
+print(power(*interval(3,7)))
+#5.作用域
+x=1
+scope=vars()
+print(scope['x'])
+scope['x']+=1
+print(x)
+
+def output(x):
+    print(x)
+
+x=1
+y=2
+output(y)
+def combine(x):
+    print(x+y)
+y='xxc'
+combine('xfag')
+
+x=1
+def change_global():
+    global x
+    x=x+1
+change_global()
+print(x)
+
+
+
+
 
 
 
