@@ -197,6 +197,49 @@ def change_global():
 change_global()
 print(x)
 
+#6.递归
+#6.1.阶乘与幂
+#可以使用循环写阶乘于幂
+def factorial(n):
+    result=n
+    for i in range(1,n):
+        result*=i
+    return  result
+
+def power(x,n):
+    result=1
+    for i in range(1,n):
+        result*=x
+    return x
+
+#使用递归写阶乘于幂
+def factorial2(n):
+    if n==1:
+        return 1
+    else:
+        return n*factorial(n-1)
+def power2(x,n):
+    if n==1:
+        return x
+    else:
+        return x*pow(x,n-1)
+
+print(factorial2(10))
+print(power2(4,3))
+#6.2二元查找
+def search(sequence,num,lower,upper):
+    if upper==lower:
+        return upper
+    else:
+        middle=(upper+lower)//2
+        if num>sequence[middle]:
+            return search(sequence,num,middle+1,upper)
+        else:
+            return search(sequence,num,lower,middle)
+
+
+
+
 
 
 
