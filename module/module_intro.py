@@ -132,3 +132,46 @@ print(a)
 # nlargest(n,iter)          返回iter中第n大元素
 # nsamllest(n,iter)         返回iter中第n小元素
 
+from heapq import  *
+from random import  shuffle
+data=list(range(10))
+shuffle(data)
+print(data)
+heap=[]
+for n in data:
+    heappush(heap,n)
+print(heap)
+heappush(heap,0.5)
+print(heap)
+x=heappop(heap)
+print(x)
+y=heappop(heap)
+print(y)
+print(heap)
+#heapify用任何列表作为参数，并转换为合理的堆
+heap=[8,6,3,7,1,4,2,9,5,0]
+heapify(heap)
+print(heap)
+heapreplace(heap,0.2)
+print(heap)
+
+#3.双端队列
+from collections import  deque
+q=deque(range(5))
+print(q)
+q.append(5)
+q.appendleft(6)
+print(q)
+x=q.pop()
+y=q.popleft()
+print(x,y)
+print(q)
+#rotate，左移或右移
+q.rotate()
+print(q)
+q.rotate(2)
+print(q)
+q.rotate(-1)
+print(q)
+
+#3.5.time
