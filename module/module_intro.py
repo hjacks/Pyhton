@@ -184,6 +184,65 @@ print(q)
 #3         时        0-23
 #4         分        0-59
 #5         秒        0-61
-#6         周        0-6
+#6         周几        0-6
 #7         儒令日     1-366
 #8         夏令时     0，-1,1
+#time模块重要函数
+#asctime([tuple])        将时间元组转换为字符串
+#localtime([secs])       将秒数转换为日期元组，以当地时间为准
+#mktime(tuple)           将时间元组转换为当地时间
+#sleep(secs)             休眠secs秒
+#strptime(string[,format]) 将字符串解析为时间元组
+#time()                  当前时间（以新纪元后的秒数，utc为准）
+
+#3.6.random模块
+import random
+#重要函数
+#random()              返回0<=n<1之间的实数，其中0<n<=1
+print(random.random())
+#getrandbits(n)        以长整数形式返回n个随机位
+print(random.getrandbits(5))
+#uniform(a,b)          返回随机整数n，其中a<=n<b
+print(random.uniform(4,9))
+#randrange([start],stop,[step]) 返回range(start,stop,step)中的随机数
+print(random.randrange(1,10,2))
+#choice(seq)           返回序列seq的任意元素
+print(random.choice([1,2,3,4,5,6,7,8]))
+#shuffle(seq[,random])   原地随机排序seq,并返回空值
+a=[1,2,3,4,5,6]
+random.shuffle(a)
+print(a)
+#sample(seq,n)            从序列中返回n个随机且独立的值
+print(random.sample([1,2,3,4,5,6],3))
+
+from time import  *
+from random import  *
+date1=(2008,1,1,0,0,0,-1,-1,-1)
+time1=mktime(date1)
+date2=(2009,1,1,0,0,0,-1,-1,-1)
+time2=mktime(date2)
+random_time=uniform(time1,time2)
+print(asctime(localtime(random_time)))
+
+#3.7.shelve
+import shelve
+s=shelve.open('test.dat')
+s['x']=['a','b','c']
+s['x'].append('d')
+print(s['x'])
+#d不见了，可以解释为：当你在shelf对象中查找元素时，这个对象会根据已存储的对象进行重新构建，当你
+#当你将某个元素赋给某个键时，它就被存储了，上述过程执行的操作如下：
+#1.列表['a','b','c']被存储在x键下
+#2.获得存储表示，并根据它创建新的列表，而d被添加到这个副本中。修改的版本还没存储
+#3.最终，再次获得原始版本，没有d
+#可以这么解决
+temp=s['x']
+temp.append('d')
+s['x']=temp
+print(s['x'])
+#或
+s=shelve.open('test.dat',writeback=True)
+s['x']=['a','b','c']
+s['x'].append('e')
+print(s['x'])
+
