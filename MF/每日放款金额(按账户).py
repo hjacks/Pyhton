@@ -1,25 +1,29 @@
-#-*- coding:utf-8 -*-
 #!/usr/bin/python
+#-*- coding:UTF-8 -*-
 import smtplib
 import datetime
 import pymysql
 from email.mime.text import MIMEText
 
 
-mailto_list=[]
+mailto_list=['']
+
 mail_host=""  #设置服务器
 mail_user=""  #用户名
 mail_pass=""   #口令
+
+
 mail_cc = ['']
+
 
 #当前时间
 day_now=datetime.date.today()-datetime.timedelta(days=1)
-# 当前日期
-day = datetime.date.today()-datetime.timedelta(days=1)
+# 当前日期-7
+day = datetime.date.today()-datetime.timedelta(days=8)
 # 月初
-day_from = datetime.date(day.year, day.month, 1)
+day_from = datetime.date(day_now.year, day_now.month, 1)
 # 上月最后一天
-day_tmp = datetime.date(day.year, day.month, 1) - datetime.timedelta(days=1)
+day_tmp = datetime.date(day.year, day.month, 1) - datetime.timedelta(days=8)
 # 上月的今天
 try:
     last_month_day = datetime.date(day_tmp.year, day_tmp.month, day.day)
@@ -30,16 +34,13 @@ except:
 last_month_day_from = datetime.date(day_tmp.year, day_tmp.month, 1)
 # 当前日期往前推 31 天
 day_pre = datetime.date.today()-datetime.timedelta(days=31)
-#上月最后一天
-lst_last = datetime.date(datetime.date.today().year,datetime.date.today().month,1)-datetime.timedelta(1)
-
 
 
 
 #发送邮件
 def send_mail(to_list,sub,content,cc):  #to_list：收件人；sub：主题；content：邮件内容
-    me=""
     
+    me=""
     msg = MIMEText(content,_subtype='html',_charset='utf8')    #创建一个实例，这里设置为html格式邮件
     msg['Subject'] = sub    #设置主题
     msg['From'] = me
@@ -55,6 +56,21 @@ def send_mail(to_list,sub,content,cc):  #to_list：收件人；sub：主题；co
     except smtplib.SMTPException:
         print (smtplib.SMTPException)
         return False
+
+def make_html_table(content_list):
+    content = '<table border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000"> \n'
+    for l in content_list:
+        content += '<tr>'
+        for data in l:
+            if l.index(data) in (1,3,4,5,6,7):
+                content += '<td align="center" width="60">' + str(data) + '</td>'
+            elif l.index(data) == 2:
+                content += '<td align="center" width="60">' + str(data) + '</td>'
+            else:
+                content += '<td align="center" width="60">' + str(data) + '</td>'
+        content += '</tr> \n'
+    content += '</table> \n\n'
+    return content
 
 def make_html_table_2(content_list,table_name):
     content = '<table border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000"> \n'
@@ -75,50 +91,32 @@ def make_html_table_2(content_list,table_name):
 
 def getdata(table_name):
     content_list = []
-    
-    head_1 = ['日期\t', '累计应还笔数', '累计提前还款', '累计正常还款', '累计逾期还款', '累计逾期笔数','首逾率','逾期率','回收率'];
+
+    head_1 = ['放款时间\t', '商户号', '商户名称', '放款金额'];
     content_list.append(head_1)
 
     # link=['月环比','0', '0', '0', '0', '0'] #月环比
     # content_list.append(link)
 
-    sql1 = "select day_key \
-    ,sum(should_back_cnt) as should_back_cnt \
-    ,sum(front_repay) as front_repay \
-    ,sum(normal_repay) as normal_repay \
-    ,sum(overdue_repay) as overdue_repay \
-    ,sum(untill_overdue) as untill_overdue \
-    ,(sum(should_back_cnt)-COALESCE(sum(front_repay),0)-COALESCE(sum(normal_repay),0))*1.0/sum(should_back_cnt) as first_overdue_lv \
-    ,COALESCE(sum(untill_overdue),0)*1.0/sum(should_back_cnt) as overdue_lv \
-    ,COALESCE(sum(overdue_repay),0)*1.0/(COALESCE(sum(overdue_repay),0)+COALESCE(sum(untill_overdue),0)) as recall_lv \
-    from reportdb.report_recovery_order_rate where day_key>=date('%s') and day_key<=date('%s') \
-    GROUP BY 1 ORDER BY 1 desc;"%(day_from,day_now)
-
+    # 日期  审核通过率
+    sql1 = "select t1.a_time,t1.id,t2.name,sum(t1.balance) from (SELECT date(arrive_time) as a_time,business_id as id,\
+        sum(balance) as balance FROM bmdb.tb_credit_record WHERE DATE(arrive_time) >= date('%s') and  status in (3,5,6,7,8) and  DATE(arrive_time) <= date('%s')\
+         group by 1,2)t1 left join(SELECT  id,a.desc as name FROM bmdb.tb_lianlian_config a  group by id )t2 \
+        on  t1.id=t2.id   GROUP BY t1.a_time,t1.id ORDER BY 1 desc; "%(day,day_now)
+    #print(sql1)
     cursor.execute(sql1)
     result1 = cursor.fetchall()
 
     for data in result1:
         d = str(data[0])
-        line = [d, '0', '0', '0', '0', '0','0','0','0']
+        line = [d, '0', '0', '0']
         if not data[1] == None:
             line[1] = str(data[1])
         if not data[2] == None:
             line[2] = str(data[2])
         if not data[3] == None:
             line[3] = str(data[3])
-        if not data[4] == None:
-            line[4] = str(data[4])
-        if not data[5] == None:
-            line[5] = str(data[5])
-        if not data[6] == None:
-            #line[6] = str(round(float(data[6]),4)*100) + '%'
-            line[6] = str(round(data[6]*100,2))+'%'
-        if not data[7] == None:
-            #line[6] = str(round(float(data[6]),4)*100) + '%'
-            line[7] = str(round(data[7]*100,2))+'%'
-        if not data[8] == None:
-            #line[6] = str(round(float(data[6]),4)*100) + '%'
-            line[8] = str(round(data[8]*100,2))+'%'
+
         content_list.append(line)
 
     # 生成html
@@ -136,19 +134,19 @@ if __name__ == '__main__':
     content = '<html lang="en"><head><meta charset="UTF-8"><title>title</title></head><body>\n'
     # print(3)
     #报表头部
-    content += '<h1 align="center">累计贷后数据统计(催收)</h1>'
+    content += '<h1 align="center">每日放款金额(按账户)</h1>'
     #print(4)
     content += neirong1.encode('utf-8')
-    #getdata表格
-    content += getdata('1.累计贷后数据统计(催收)')
-    #content += '<h1 <br/> </h1>'
+    # getdata表格
+    content += getdata('每日放款金额(按账户)')
+
     #print(5)
     content += '</html>\n\n'
 
-    if send_mail(mailto_list,u"累计贷后数据统计(催收)",content,mail_cc):
+    if send_mail(mailto_list,u"每日放款金额(按账户)",content,mail_cc):
         print ('send mail succeed!')
     else:
-        send_mail('',"邮件报表发送失败","邮件报表发送失败",'*****@51jnq.com')
+        send_mail('',"邮件报表发送失败","邮件报表发送失败",'')
 
     cursor.close()
     conn.close()

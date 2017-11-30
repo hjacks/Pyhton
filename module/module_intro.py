@@ -246,3 +246,13 @@ s['x']=['a','b','c']
 s['x'].append('e')
 print(s['x'])
 
+#3.8.re模块
+#重要函数
+#compile(pattern[,flags])         根据包含正则表达式的字符串创建模式对象
+#search(pattern,string[,flags])   在字符串中寻找模式
+#match(pattern,string[,flags])    在字符串开始处匹配模式
+#split(pattern,string[, maxsplit=0]) 根据模式的匹配项分隔字符串
+#findall(pattern,string)           列出字符串中模式的所以匹配项
+#sub(pat,peal,string[,count=0])    将字符串中所有pat匹配项用peal替换
+#escape(string)                    将字符串中所有特殊正则表达式转义
+
