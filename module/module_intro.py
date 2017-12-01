@@ -255,4 +255,6 @@ print(s['x'])
 #findall(pattern,string)           列出字符串中模式的所以匹配项
 #sub(pat,peal,string[,count=0])    将字符串中所有pat匹配项用peal替换
 #escape(string)                    将字符串中所有特殊正则表达式转义
-
+import re
+print(re.match('p','python'))
+print(re.match('p','ython'))
