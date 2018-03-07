@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CityWeatherResponse>
+    <status>success</status>
+    <date>2014-04-27</date>
+    <results>
+        <currentCity>双牌</currentCity>
+        <weather_data>
+            <date>周六(实时：16℃)</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/yin.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/yin.png
+            </nightPictureUrl>
+            <weather>阴</weather>
+            <wind>北风微风</wind>
+            <temperature>15℃</temperature>
+            <date>周日</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/duoyun.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/duoyun.png
+            </nightPictureUrl>
+            <weather>多云</weather>
+            <wind>北风微风</wind>
+            <temperature>20 ~ 15℃</temperature>
+            <date>周一</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/duoyun.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/duoyun.png
+            </nightPictureUrl>
+            <weather>多云</weather>
+            <wind>北风微风</wind>
+            <temperature>22 ~ 15℃</temperature>
+            <date>周二</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/zhenyu.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                 http://api.map.baidu.com/images/weather/night/zhenyu.png
+            </nightPictureUrl>
+            <weather>阵雨</weather>
+            <wind>北风微风</wind>
+            <temperature>20 ~ 15℃</temperature>
+        </weather_data>
+        <currentCity>长沙</currentCity>
+        <weather_data>
+            <date>周六(实时：16℃)</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/zhenyu.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/zhenyu.png
+            </nightPictureUrl>
+            <weather>阵雨</weather>
+            <wind>微风</wind>
+            <temperature>15℃</temperature>
+            <date>周日</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/duoyun.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/duoyun.png
+            </nightPictureUrl>
+            <weather>多云</weather>
+            <wind>微风</wind>
+            <temperature>21 ~ 15℃</temperature>
+            <date>周一</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/duoyun.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/duoyun.png
+            </nightPictureUrl>
+            <weather>多云</weather>
+            <wind>微风</wind>
+            <temperature>24 ~ 15℃</temperature>
+            <date>周二</date>
+            <dayPictureUrl>
+                http://api.map.baidu.com/images/weather/day/duoyun.png
+            </dayPictureUrl>
+            <nightPictureUrl>
+                http://api.map.baidu.com/images/weather/night/duoyun.png
+            </nightPictureUrl>
+            <weather>多云</weather>
+            <wind>北风微风</wind>
+            <temperature>24 ~ 14℃</temperature>
+        </weather_data>
+    </results>
+</CityWeatherResponse>
