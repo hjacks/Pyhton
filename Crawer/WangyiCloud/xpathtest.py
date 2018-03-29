@@ -25,9 +25,10 @@ html = etree.parse("hello.html")
 # result = html.xpath("//li[last()]/a/@href")
 # print(result)
 
-# result = html.xpath("//li[last()-1]/a")
-# print(result)
-
-result = html.xpath('//*[@class="bold"]')
+result = html.xpath("//li[last()-1]/a")
 print(result)
-print(result[0].tag)
+
+# result = html.xpath('//*[@class="bold"]')
+# print(result)
+# print(result[0].tag)
+# print(result[0].text)
