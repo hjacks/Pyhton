@@ -1,0 +1,11 @@
+import requests
+r = requests.get('https://api.github.com/user', auth=('hjacks', 'xt123123654..'))
+print(r.status_code)
+print('----------------------------------------')
+print(r.headers['content-type'])
+print('----------------------------------------')
+print(r.encoding)
+print('----------------------------------------')
+print(r.text)
+print('----------------------------------------')
+print(r.json)
