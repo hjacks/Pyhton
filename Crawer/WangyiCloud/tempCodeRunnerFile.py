@@ -1,0 +1,5 @@
+start_02 = time.time()
+    # polls = Pool(processes=2)
+    # polls.map(re_scraper,urls)
+    # end_02 = time.time()
+    # print(u"两爬虫耗时：",end_02-start_02)

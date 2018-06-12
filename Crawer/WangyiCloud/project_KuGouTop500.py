@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
 
-client = MongoClient()  # mongodb server
-songs = client.kugou_db.songs # song collection
+# client = MongoClient()  # mongodb server
+# songs = client.kugou_db.songs # song collection
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 }
@@ -31,8 +31,8 @@ def get_info(url):
             'time': song_time.get_text().strip()
         }
         print(data)
-        song_id = songs.insert(data) # insert db
-        print(song_id)
+        #song_id = songs.insert(data) # insert db
+        # print(song_id)
         print('---------------------------------')
 
 

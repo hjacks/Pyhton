@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c9b6d5f-deda-443b-8456-94b964bd13e1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crawer/WangyiCloud/project_KuGouTop500.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawer/WangyiCloud/project_KuGouTop500.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/机器学习实战/Decision Tree.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,22 +15,31 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pyhton$kNN.coverage" NAME="kNN Coverage Results" MODIFIED="1524127671347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Knn" />
+    <SUITE FILE_PATH="coverage/Pyhton$sklearn_DecisionTree.coverage" NAME="sklearn-DecisionTree Coverage Results" MODIFIED="1525945393642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
+    <SUITE FILE_PATH="coverage/Pyhton$DecisionTreeStore.coverage" NAME="DecisionTreeStore Coverage Results" MODIFIED="1525847670602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
+    <SUITE FILE_PATH="coverage/Pyhton$Decision_Tree__1_.coverage" NAME="Decision Tree (1) Coverage Results" MODIFIED="1525847382488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
     <SUITE FILE_PATH="coverage/Pyhton$kNN_test02.coverage" NAME="kNN_test02 Coverage Results" MODIFIED="1524210020900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Knn" />
     <SUITE FILE_PATH="coverage/Pyhton$kNN_test04.coverage" NAME="kNN_test04 Coverage Results" MODIFIED="1524216838760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Knn/数字识别" />
-    <SUITE FILE_PATH="coverage/Pyhton$Decision_Tree.coverage" NAME="Decision Tree Coverage Results" MODIFIED="1525423981766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战" />
+    <SUITE FILE_PATH="coverage/Pyhton$Decision_Tree.coverage" NAME="Decision Tree Coverage Results" MODIFIED="1525846731690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战" />
+    <SUITE FILE_PATH="coverage/Pyhton$DecisionTreeLoad.coverage" NAME="DecisionTreeLoad Coverage Results" MODIFIED="1525848329922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Decision Tree.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree.py">
+      <file leaf-file-name="sklearn-DecisionTree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree/sklearn-DecisionTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="198" column="19" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
+            <state relative-caret-position="611">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
-                <element signature="e#24#44#0" expanded="true" />
+                <element signature="e#24#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_KuGouTop500.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Crawer/WangyiCloud/project_KuGouTop500.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -66,6 +77,10 @@
         <option value="$PROJECT_DIR$/book/机器学习实战/Knn/kNN_test02.py" />
         <option value="$PROJECT_DIR$/book/机器学习实战/Knn/数字识别/kNN_test04.py" />
         <option value="$PROJECT_DIR$/book/机器学习实战/Decision Tree.py" />
+        <option value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/Decision Tree.py" />
+        <option value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeStore.py" />
+        <option value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeLoad.py" />
+        <option value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/sklearn-DecisionTree.py" />
       </list>
     </option>
   </component>
@@ -75,9 +90,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="812" />
-    <option name="y" value="4" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1048" />
     <option name="height" value="1040" />
   </component>
@@ -106,6 +121,13 @@
               <item name="Pyhton" type="462c0819:PsiDirectoryNode" />
               <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="机器学习实战" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pyhton" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pyhton" type="462c0819:PsiDirectoryNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="机器学习实战" type="462c0819:PsiDirectoryNode" />
+              <item name="Decision Tree" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pyhton" type="b2602c69:ProjectViewProjectNode" />
@@ -164,7 +186,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Decision Tree">
+  <component name="RunManager" selected="Python.sklearn-DecisionTree">
+    <configuration name="Decision Tree (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pyhton" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/Decision Tree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Decision Tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyhton" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,7 +225,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="kNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DecisionTreeLoad" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyhton" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -192,18 +233,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Knn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Knn/kNN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeLoad.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="kNN_test02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DecisionTreeStore" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyhton" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,18 +252,18 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Knn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Knn/kNN_test02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeStore.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="kNN_test04" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sklearn-DecisionTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pyhton" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,50 +271,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Knn/数字识别" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Knn/数字识别/kNN_test04.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="module_intro" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pyhton" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/module" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/module/module_intro.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book/机器学习实战/Decision Tree/sklearn-DecisionTree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.module_intro" />
-      <item itemvalue="Python.kNN" />
-      <item itemvalue="Python.kNN_test02" />
-      <item itemvalue="Python.kNN_test04" />
       <item itemvalue="Python.Decision Tree" />
+      <item itemvalue="Python.Decision Tree (1)" />
+      <item itemvalue="Python.DecisionTreeStore" />
+      <item itemvalue="Python.DecisionTreeLoad" />
+      <item itemvalue="Python.sklearn-DecisionTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sklearn-DecisionTree" />
+        <item itemvalue="Python.DecisionTreeLoad" />
+        <item itemvalue="Python.DecisionTreeStore" />
+        <item itemvalue="Python.Decision Tree (1)" />
         <item itemvalue="Python.Decision Tree" />
-        <item itemvalue="Python.kNN_test04" />
-        <item itemvalue="Python.kNN_test02" />
-        <item itemvalue="Python.kNN" />
-        <item itemvalue="Python.module_intro" />
       </list>
     </recent_temporary>
   </component>
@@ -291,20 +313,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="812" y="4" width="1048" height="1040" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34624144" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.004048583" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3456376" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32290503" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0010660981" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.4760128" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.4757085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -312,11 +334,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="运行" order="7" weight="0.23541887" />
+      <window_info anchor="bottom" id="运行" order="10" weight="0.23541887" />
       <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="调试" order="11" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -327,16 +349,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7137">
-          <caret line="183" column="10" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree.py" />
     <entry file="file://$PROJECT_DIR$/book/机器学习实战/Knn/数字识别/kNN_test04.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3120">
@@ -429,15 +442,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree.py">
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree.py" />
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeLoad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="198" column="19" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
+        <state relative-caret-position="407">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree/DecisionTreeStore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree/Decision Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="330" lean-forward="true" selection-start-line="330" selection-end-line="330" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/机器学习实战/Decision Tree/sklearn-DecisionTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
-            <element signature="e#24#44#0" expanded="true" />
+            <element signature="e#24#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawer/WangyiCloud/project_KuGouTop500.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

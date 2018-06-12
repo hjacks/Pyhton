@@ -1,28 +1,34 @@
 import re
+import time
+from multiprocessing import Pool 
 import requests
-from bs4 import BeautifulSoup
 
 headers = {
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.4882.400 QQBrowser/9.7.13059.400'
 }
-urls = ['https://www.pexels.com/?page={}'.format(str(i)) for i in range (1,21)]
-photos = []
 
-for url in urls:
-    wb_data = requests.get(url, headers=headers)
-    soup = BeautifulSoup(wb_data, 'lxml')
-    imgs = soup.select('article.photo-item > a > img')
-    for img in imgs:
-        photo = img.get('src')
-        photos.append(photo)
+def re_scraper(url):
+    res = requests.get(url, headers=headers)
+    names = re.findall('<div class="build_word01" onclick="toPropertyInfo(330184,331788908);">.*?<a>(.*?)</a>',res.text,re.S)
+    promotions = re.findall('<div class="fl line26 mgl black">(.*?)</div>',res.text,re.S)
+    # prices = re.findall('<div class="word1">.*?<span class=(.*?)></span><span class=(.*?)></span><span class=(.*?)></span><span class=(.*?)></span><span class=(.*?)></span>.*?</div>')
+    types = re.findall('<p class="build_txt03 colormg">(.*?)</p>',res.text,re.S)
+    addresses = re.findall('<p class="build_txt03 outof colormg">(.*?)</p>',res.text,re.S)
+    Avai4Sales = re.findall('<a href="/newhouse/property_33_375419827_price.htm?housestate=1" target="_blank">(.*?)</a>',res.text,re.S)
+    Sum4Sales = re.findall('<a href="/newhouse/property_33_375419827_price.htm" target="_blank">(.*?)</a>',res.text,re.S)
+    for name,promotion,typee,address,Avai4Sale,Sum4Sale in zip(names,promotions,types,addresses,Avai4Sales,Sum4Sales):
+        data = {
+            "名称":name,
+            "推广名":promotion,
+            "地址":address,
+            "类型":typee,
+            "可售":AfSale,
+            "总数":SfSale
+        }
+        print(data)
 
-path = 'F://yibu/'
-for item in photos:
-    data = requests.get(item,headers=headers)
-    photo_name = re.findall('\d\/(.*?)\?a',item)
-    print(photo_name)
-    if photo_name:
-        fp = open(path+photo_name[0],'wb')
-        fp.writable(data.content)
-        fp.close
+if __name__ == "__main__":
+    urls = ['http://www.tmsf.com/newhouse/property_searchall.htm?searchkeyword=&keyword=&sid=&districtid=&areaid=&dealprice=&propertystate=2&propertytype=&ordertype=&priceorder=&openorder=&view720data=&page={}&bbs=&avanumorder=&comnumorder='.format(str(i)) for i in range(1,2)]
+    polls = Pool(processes=4)
+    polls.map(re_scraper,urls)
+    
