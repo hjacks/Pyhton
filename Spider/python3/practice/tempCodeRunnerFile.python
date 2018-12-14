@@ -1,16 +1,7 @@
-import time 
-import asyncio
-
-now = lambda:time.time()
-
-async def db_some_work(x):
-    print('Waiting:',x)
-
-start = now()
-
-coroutinue = db_some_work(2)
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(coroutinue)
-
-print("Time:",now()-start)
+import pdb
+a = "aaa"
+pdb.set_trace()
+b = "bbb"
+c = "ccc"
+final = a+b+c
+print(final)
